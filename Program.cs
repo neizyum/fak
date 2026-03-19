@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Diagnostics.CodeAnalysis;
 
 namespace fak
@@ -41,14 +41,14 @@ namespace fak
                             DateTime start = DateTime.Now;
                             Console.WriteLine(first(mas));
                             DateTime end = DateTime.Now;
-                            Console.WriteLine($"time: {(end-start).ToString("fffffff")} ms");
+                            Console.WriteLine($"time: {(end - start).ToString("fffffff")} ms");
                             breakme();
                             break;
                         }
                     case ConsoleKey.D4:
                     case ConsoleKey.NumPad4:// если нажата клавиша с цифрой 4
                         {
-                            DateTime start = DateTime.Now;                            
+                            DateTime start = DateTime.Now;
                             Console.WriteLine(second(mas));
                             DateTime end = DateTime.Now;
                             Console.WriteLine($"time: {(end - start).ToString("fffffff")} ms");
@@ -71,7 +71,7 @@ namespace fak
         /// <summary>ввод</summary><returns>обозначенное число</returns>
         static int Enter(string n)
         {
-            Console.Write($"{n}: ");
+            Console.Write($"\n{n}: ");
             return int.Parse(Console.ReadLine());
         }
         ///<summary>сгенерирует массив</summary><returns>2д массив</returns>
@@ -86,8 +86,8 @@ namespace fak
         ///<summary>вывод массива</summary><returns>массив вывод</returns>
         static void print(int[] a)
         {
-            for (int i = 0; i < a.Length; i++) Console.Write($"{a[i]} ");
             Console.WriteLine();
+            for (int i = 0; i < a.Length; i++) Console.Write($"{a[i]} ");
         }
         static int first(int[] a)
         {
@@ -138,7 +138,7 @@ namespace fak
                     return mid;
             }
 
-            
+
             if (a[low] == u)
                 return low;
             if (a[high] == u)
